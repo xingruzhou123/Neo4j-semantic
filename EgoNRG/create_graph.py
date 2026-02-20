@@ -36,7 +36,7 @@ except ImportError:
 DATASET_PAGE_URL = "https://dataverse.tdl.org/dataset.xhtml?persistentId=doi:10.18738/T8/DC4J0Q"
 
 # Neo4j connection settings
-URI = "bolt://localhost:7687"
+URI = "bolt://localhost:7688"
 USERNAME = "neo4j"
 PASSWORD = "12345678"
 
@@ -176,7 +176,7 @@ def extract_research_project_data(data: dict) -> dict:
     research_problem = ""
 
     return {
-        'rp_id': None,
+        # 'rp_id': None,
         'research_project_title': clean_text(title) or "N/A",
         'contact_person_and_email': clean_text(contact_info) or "N/A",
         'data_description': clean_text(description) or "N/A",
@@ -519,7 +519,7 @@ def create_graph(driver, json_data: dict):
     has_robot_data = check_robot_data_presence(json_data)
 
     with driver.session() as session:
-        rp_data['rp_id'] = get_next_id(session, 'ResearchProject', 'rp_id')
+        # rp_data['rp_id'] = get_next_id(session, 'ResearchProject', 'rp_id')
         rm_data['rm_id'] = get_next_id(session, 'ResearchMethod', 'rm_id')
         ei_data['ei_id'] = get_next_id(session, 'ExperimentInstrument', 'ei_id')
         hs_data['hs_id'] = get_next_id(session, 'HumanSubjects', 'hs_id')
@@ -529,9 +529,8 @@ def create_graph(driver, json_data: dict):
         if robot_data:
             robot_data['r_id'] = get_next_id(session, 'Robots', 'r_id')
 
-        session.run("""
+        result = session.run("""
             CREATE (rp:ResearchProject {
-                rp_id: $rp_id,
                 research_project_title: $research_project_title,
                 contact_person_and_email: $contact_person_and_email,
                 data_description: $data_description,
@@ -546,11 +545,13 @@ def create_graph(driver, json_data: dict):
                 team_members: $team_members,
                 will_this_data_be_published: $will_this_data_be_published
             })
+            RETURN elementId(rp) AS id
         """, **rp_data)
-        print(f"Created ResearchProject (rp_id={rp_data['rp_id']}): {rp_data['research_project_title'][:60]}...")
+        rp_internal_id = result.single()["id"]
+        print(f"Created ResearchProject (ID={rp_internal_id}): {rp_data['research_project_title'][:60]}...")
 
         session.run("""
-            MATCH (rp:ResearchProject {rp_id: $rp_id})
+            MATCH (rp:ResearchProject) WHERE elementId(rp) = $rp_id
             CREATE (rm:ResearchMethod {
                 rm_id: $rm_id,
                 name: $name,
@@ -558,7 +559,7 @@ def create_graph(driver, json_data: dict):
                 type_s: $type_s
             })
             CREATE (rp)-[:Has_ResearchMethod]->(rm)
-        """, rp_id=rp_data['rp_id'], **rm_data)
+        """, rp_id=rp_internal_id, **rm_data)
 
         # session.run("""
         #     MATCH (rm:ResearchMethod {rm_id: $rm_id})
@@ -633,14 +634,14 @@ def create_graph(driver, json_data: dict):
 
         dataset_url = DATASET_PAGE_URL
         session.run("""
-            MATCH (rp:ResearchProject {rp_id: $rp_id})
+            MATCH (rp:ResearchProject) WHERE elementId(rp) = $rp_id
             CREATE (d:Dataset {
                 d_id: $d_id,
                 name: $name,
                 url: $url
             })
             CREATE (rp)-[:Generates]->(d)
-        """, rp_id=rp_data['rp_id'], d_id=dataset_data['d_id'], name=dataset_data['name'], url=dataset_url)
+        """, rp_id=rp_internal_id, d_id=dataset_data['d_id'], name=dataset_data['name'], url=dataset_url)
         print(f"Created Dataset (d_id={dataset_data['d_id']}): {dataset_url}")
 
         # if has_robot_data:
