@@ -36,7 +36,7 @@ except ImportError:
 DATASET_PAGE_URL = "https://dataverse.tdl.org/dataset.xhtml?persistentId=doi:10.18738/T8/DC4J0Q"
 
 # Neo4j connection settings
-URI = "bolt://localhost:7688"
+URI = "bolt://localhost:7687"
 USERNAME = "neo4j"
 PASSWORD = "12345678"
 
@@ -522,12 +522,12 @@ def create_graph(driver, json_data: dict):
         # rp_data['rp_id'] = get_next_id(session, 'ResearchProject', 'rp_id')
         rm_data['rm_id'] = get_next_id(session, 'ResearchMethod', 'rm_id')
         ei_data['ei_id'] = get_next_id(session, 'ExperimentInstrument', 'ei_id')
-        hs_data['hs_id'] = get_next_id(session, 'HumanSubjects', 'hs_id')
+        hs_data['hs_id'] = get_next_id(session, 'HumanSubject', 'hs_id')
         es_data['es_id'] = get_next_id(session, 'ExperimentSetting', 'es_id')
-        sessions_data['s_id'] = get_next_id(session, 'Session', 's_id')
+        sessions_data['s_id'] = get_next_id(session, 'Sessions', 's_id')
         dataset_data['d_id'] = get_next_id(session, 'Dataset', 'd_id')
         if robot_data:
-            robot_data['r_id'] = get_next_id(session, 'Robots', 'r_id')
+            robot_data['r_id'] = get_next_id(session, 'Robot', 'r_id')
 
         result = session.run("""
             CREATE (rp:ResearchProject {
@@ -558,7 +558,7 @@ def create_graph(driver, json_data: dict):
                 method_details: $method_details,
                 type_s: $type_s
             })
-            CREATE (rp)-[:Has_ResearchMethod]->(rm)
+            CREATE (rp)-[:HAS_METHOD]->(rm)
         """, rp_id=rp_internal_id, **rm_data)
 
         # session.run("""
@@ -568,12 +568,12 @@ def create_graph(driver, json_data: dict):
         #         Survey: $Survey,
         #         Code_book: $Code_book
         #     })
-        #     CREATE (rm)-[:Has_ExperimentInstrument]->(ei)
+        #     CREATE (rm)-[:Has_questionnaires]->(ei)
         # """, rm_id=rm_data['rm_id'], **ei_data)
 
         session.run("""
             MATCH (rm:ResearchMethod {rm_id: $rm_id})
-            CREATE (hs:HumanSubjects {
+            CREATE (hs:HumanSubject {
                 hs_id: $hs_id,
                 Age: $Age,
                 Gender: $Gender,
@@ -602,7 +602,7 @@ def create_graph(driver, json_data: dict):
 
         # session.run("""
         #     MATCH (rm:ResearchMethod {rm_id: $rm_id})
-        #     CREATE (s:Session {
+        #     CREATE (s:Sessions {
         #         s_id: $s_id,
         #         Sessions: $Sessions,
         #         Number_of_sessions: $Number_of_sessions,
@@ -616,7 +616,7 @@ def create_graph(driver, json_data: dict):
         # if robot_data:
         #     session.run("""
         #         MATCH (rp:ResearchProject {rp_id: $rp_id})
-        #         CREATE (r:Robots {
+        #         CREATE (r:Robot {
         #             r_id: $r_id,
         #             Robot_type: $Robot_type,
         #             Model: $Model,
@@ -628,7 +628,7 @@ def create_graph(driver, json_data: dict):
         #             Size: $Size,
         #             Motion_replay: $Motion_replay
         #         })
-        #         CREATE (rp)-[:Experiment_Robots]->(r)
+        #         CREATE (rp)-[:USES_ROBOT]->(r)
         #     """, rp_id=rp_data['rp_id'], **robot_data)
         #     print(f"Created Robot node (r_id={robot_data['r_id']})")
 
@@ -640,16 +640,16 @@ def create_graph(driver, json_data: dict):
                 name: $name,
                 url: $url
             })
-            CREATE (rp)-[:Generates]->(d)
+            CREATE (rp)-[:HAS_DATASET]->(d)
         """, rp_id=rp_internal_id, d_id=dataset_data['d_id'], name=dataset_data['name'], url=dataset_url)
         print(f"Created Dataset (d_id={dataset_data['d_id']}): {dataset_url}")
 
         # if has_robot_data:
-        #     rd_id = get_next_id(session, 'RobotDataset', 'rd_id')
+        #     rd_id = get_next_id(session, 'RobotData', 'rd_id')
         #     session.run("""
         #         MATCH (d:Dataset {d_id: $d_id})
-        #         CREATE (rd:RobotDataset {rd_id: $rd_id, name: 'RobotDataset', url: $url})
-        #         CREATE (d)-[:Dataset_Robot]->(rd)
+        #         CREATE (rd:RobotData {rd_id: $rd_id, name: 'RobotData', url: $url})
+        #         CREATE (d)-[:Has_RobotData]->(rd)
         #     """, d_id=dataset_data['d_id'], rd_id=rd_id, url=DATASET_PAGE_URL)
         #     print(f"Created RobotDataset node (rd_id={rd_id})")
 
@@ -739,11 +739,11 @@ def create_graph(driver, json_data: dict):
                 # """, d_id=dataset_data['d_id'], file_id=file_id)
 
         # if has_human_data:
-        #     hd_id = get_next_id(session, 'HumanDataset', 'hd_id')
+        #     hd_id = get_next_id(session, 'HumanData', 'hd_id')
         #     session.run("""
         #         MATCH (d:Dataset {d_id: $d_id})
-        #         CREATE (hd:HumanDataset {hd_id: $hd_id, name: 'HumanDataset', url: $url})
-        #         CREATE (d)-[:Dataset_Human]->(hd)
+        #         CREATE (hd:HumanData {hd_id: $hd_id, name: 'HumanData', url: $url})
+        #         CREATE (d)-[:Has_HumanData]->(hd)
         #     """, d_id=dataset_data['d_id'], hd_id=hd_id, url=DATASET_PAGE_URL)
         #     print(f"Created HumanDataset node (hd_id={hd_id})")
 
