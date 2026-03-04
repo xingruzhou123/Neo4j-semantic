@@ -1,0 +1,824 @@
+{
+  "id": 690108,
+  "identifier": "T8/E9WFTW",
+  "persistentUrl": "https://doi.org/10.18738/T8/E9WFTW",
+  "protocol": "doi",
+  "authority": "10.18738",
+  "publisher": "Texas Data Repository",
+  "publicationDate": "2025-09-02",
+  "storageIdentifier": "s3tacc://10.18738/T8/E9WFTW",
+  "datasetType": "dataset",
+  "datasetVersion": {
+    "id": 5588,
+    "datasetId": 690108,
+    "datasetPersistentId": "doi:10.18738/T8/E9WFTW",
+    "storageIdentifier": "s3tacc://10.18738/T8/E9WFTW",
+    "versionNumber": 2,
+    "versionMinorNumber": 0,
+    "versionState": "RELEASED",
+    "latestVersionPublishingState": "RELEASED",
+    "productionDate": "2024-05-01",
+    "lastUpdateTime": "2025-09-25T18:13:07Z",
+    "releaseTime": "2025-09-25T18:13:07Z",
+    "createTime": "2025-09-11T16:23:06Z",
+    "publicationDate": "2025-09-02",
+    "citationDate": "2025-09-02",
+    "termsOfUse": "CODa Re-ID is available for non-commerical under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (“CC BY-NC-SA 4.0”). The CC BY-NC-SA 4.0 may be accessed at https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode . When You download or use the Datasets from the websites or elsewhere, you are agreeing to comply with the terms of CC BY-NC-SA 4.0 as applicable, and also agreeing to the Dataset Terms. Where these Dataset Terms conflict with the terms of CC BY-NC-SA 4.0, these Dataset Terms shall prevail.",
+    "fileAccessRequest": true,
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "name": "citation",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "CODa  Re-identification (Re-ID) Dataset"
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Dongmeyong Lee"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "The University of Texas at Austin"
+                }
+              },
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Adkins, Amanda"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://ror.org/00hj54h04",
+                  "expandedvalue": {
+                    "scheme": "http://www.grid.ac/ontology/",
+                    "termName": "The University of Texas at Austin",
+                    "@type": "https://schema.org/Organization"
+                  }
+                },
+                "authorIdentifierScheme": {
+                  "typeName": "authorIdentifierScheme",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "ORCID"
+                },
+                "authorIdentifier": {
+                  "typeName": "authorIdentifier",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://orcid.org/0000-0002-1399-7300",
+                  "expandedvalue": {
+                    "personName": "Adkins, Amanda",
+                    "@id": "https://orcid.org/0000-0002-1399-7300",
+                    "scheme": "ORCID",
+                    "@type": "https://schema.org/Person"
+                  }
+                }
+              },
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Biswas, Joydeep"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "The University of Texas at Austin"
+                },
+                "authorIdentifierScheme": {
+                  "typeName": "authorIdentifierScheme",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "ORCID"
+                },
+                "authorIdentifier": {
+                  "typeName": "authorIdentifier",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://orcid.org/0000-0002-1211-1731",
+                  "expandedvalue": {
+                    "personName": "Biswas, Joydeep",
+                    "@id": "https://orcid.org/0000-0002-1211-1731",
+                    "scheme": "ORCID",
+                    "@type": "https://schema.org/Person"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Esteva, Maria"
+                },
+                "datasetContactAffiliation": {
+                  "typeName": "datasetContactAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "University of Texas at Austin"
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "maria@tacc.utexas.edu"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "\u003Ch1\u003EIntroduction\u003C/h1\u003E \nCODa Re-ID (Campus Object Dataset — Re-Identification) is a large-scale, real-world object re-identification dataset created to improve long-term robot perception and navigation in outdoor environments. It contains ≈\u003Cb\u003E1.04M\u003C/b\u003E per-frame 2D observations of \u003Cb\u003E557\u003C/b\u003E globally-unique static objects across \u003Cb\u003E8\u003C/b\u003E categories (trees, poles, bollard, informational signs, traffic signs, fire hydrants, emergency phone, and trash can) captured across multiple robot traversals on a university campus under varying lighting, weather, and viewpoint conditions. \n\u003Cbr\u003E\n\u003Cbr\u003E \nHighlights: \n\u003Cul\u003E \n\u003Cli\u003EGlobally consistent instance IDs: each physical object is assigned a persistent global identifier tracked across all sequences.\u003C/li\u003E \n\u003Cli\u003EMulti-modal annotations: per-frame 2D bounding boxes, segmentation contour, global 3D bounding boxes, and per-frame camera poses/timestamps.\u003C/li\u003E \n\u003Cli\u003EDiverse conditions: captures span multiple times of day and weather (sunny, overcast, rainy, low-light/night) and a wide range of viewing distances and angles.\u003C/li\u003E \n\u003Cli\u003EReproducible pipeline: global trajectory alignment → 3D instance annotation → projection to images → automatic mask generation (SAM) → manual verification.\u003C/li\u003E\n \u003Cli\u003EEvaluation ready: standardized train/val/test splits and baseline evaluation recipes (code & checkpoints included in the repo).\u003C/li\u003E \u003Cli\u003EIntended for object re-identification, object-centric SLAM, long-term localization, and persistent scene understanding research.\u003C/li\u003E\n\u003Cimg src=\"https://dataverse.tdl.org/api/access/datafile/778872\" alt=\"dataset_overall.png\"\u003E\n\n\u003Ch2\u003EContent\u003C/h2\u003E \nThe dataset contains (summary): \u003Cul\u003E \n\u003Cli\u003E≈ \u003Cb\u003E1.04M\u003C/b\u003E per-frame 2D observations linked to \u003Cb\u003E557\u003C/b\u003E globally unique 3D object instances.\u003C/li\u003E \n\u003Cli\u003EModalities: RGB images, per-frame 2D bboxes, per-frame segmentation masks (palette PNGs), projected global 3D bboxes, camera poses, timestamps, and split lists (train/val/test).\u003C/li\u003E \n\u003Cli\u003ESplit policy: sequences split by time/trajectory to ensure evaluation on temporally and spatially distinct holds (split files included).\u003C/li\u003E\u003C/ul\u003E\n\n\u003Ch2\u003ECollection Method\u003C/h2\u003E \n\u003Cp\u003ECODa Re-ID is derived by post-processing the original CODa dataset. From the 53 categories of objects identified in CODa we re-identified only eight categories: trees, poles, bollard, informational signs, traffic signs, fire hydrants, emergency phone, and trash can. \u003C/p\u003E\n\u003Cp\u003EWe first align robot trajectories using LiDAR–inertial odometry with manual loop closures to obtain a single global frame. We then cluster the CODa-provided 3D bounding-box annotations along the aligned trajectories to identify persistent 3D objects. For each object we record a global 3D bounding box and observation metadata, and project these into every image frame using CODa camera intrinsics and poses. The capture sessions include repeated campus traversals, so the same object is observed under varied weather, illumination, and viewpoints. \u003C/p\u003E\n\n\u003Ch2\u003EAnnotations\u003C/h2\u003E \nAnnotations were created with a semi-automated pipeline: \u003Col\u003E \n\u003Cli\u003EGlobal 3D instance annotation and clustering across aligned trajectories to produce a unique \u003Ccode\u003Einstance_id\u003C/code\u003E per physical object.\u003C/li\u003E \n\u003Cli\u003EProjection of global 3D boxes into all image frames to generate per-frame localization priors.\u003C/li\u003E \n\u003Cli\u003EAutomatic mask generation using Segment Anything (SAM) with projected boxes/points as prompts, followed by box re-fitting to mask contours.\u003C/li\u003E \n\u003Cli\u003ETargeted manual verification and correction for low-confidence/flagged frames (sampled spot checks and flagged items corrected by annotators).\u003C/li\u003E \n\u003C/ol\u003E Each frame’s annotation is exported as a JSON record (image path, timestamp, camera pose, weather condition, instances). \u003Cbr\u003E Example of segmentation & projected 3D annotation: \n\u003Cimg src=\"https://dataverse.tdl.org/api/access/datafile/778871\" alt=\"annotation_example.png\"\u003E\n\n\u003Ch2\u003EEvaluation\u003C/h2\u003E \nWe provide standardized train/val/test splits and baseline results (e.g., CLOVER-based re-id baselines) plus the official training/evaluation scripts. Configuration files, example commands, and pretrained checkpoints are included in the repository to enable straightforward reproduction of reported baselines.\n\n\u003Ch2\u003EDataset Organization\u003C/h2\u003E \n\u003Cli\u003Eannotations/ — per-frame annotation(2D bounding box, segmentation contour) files organized by camera and sequence: {cam}/{sequence}/{frame}.json\u003C/li\u003E\n\u003Cli\u003E3d_bbox/global/ — one JSON per object class in the global frame: {object}.json.\u003C/li\u003E\n\u003Cli\u003ELICENSE — usage terms\u003C/li\u003E\n\u003Cimg src=\"https://dataverse.tdl.org/api/access/datafile/778870\" alt=\"codare-id_data_structure.png\"\u003E\n\n\u003Ch2\u003EDataset Quality Statement\u003C/h2\u003E \nData quality was maintained via a reproducible pipeline and a QA process that includes automated validators (missing files, empty masks, box/mask IoU checks) and manual spot checks on sampled observations. Known limitations (documented in the full report) include occasional projection error in extreme foreshortening and noisy weather labels; validation scripts are provided to re-run quality checks.\n\n\u003Ch2\u003EFurther Information\u003C/h2\u003E \nSee the full Dataset Report included with this release for detailed schema, collection logs, calibration files, validation scripts, and reproducibility instructions.\n \n\u003Ch2\u003EDownload Dataset\u003C/h2\u003E\n\u003Col\u003E\n\u003Cli\u003EDownload 3D annotation files (*.json) in the `data/3d_bbox/global` directory.\u003C/li\u003E\n\u003Cli\u003EDownload 2D annotation file (annotations.tar.gz) in the `data` and unzip the tar file.\u003C/li\u003E\n\u003Cpre\u003E\u003Ccode\u003Etar -xvzf annotations.tar.gz\u003C/code\u003E\u003C/pre\u003E\n\u003Cli\u003EFollow \u003Ca href=https://dataverse.tdl.org/dataset.xhtml?persistentId=doi:10.18738/T8/BBOQMV\u003ECODa instruction\u003C/a\u003E to download CODa image files\u003C/li\u003E\n\u003C/ol\u003E"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Computer and Information Science"
+            ]
+          },
+          {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "autonomous robots"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "object reidentification"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "computer vision"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "image retrieval"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "campus trajectory"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "urban trajectory"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "publication",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "publicationRelationType": {
+                  "typeName": "publicationRelationType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "IsCitedBy"
+                },
+                "publicationCitation": {
+                  "typeName": "publicationCitation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Dongmyeong Lee*, Amanda Adkins*, Joydeep Biswas. \"CLOVER: Context-aware Long-term Object Viewpoint- and Environment- Invariant Representation Learning\""
+                },
+                "publicationIDType": {
+                  "typeName": "publicationIDType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "arXiv"
+                },
+                "publicationIDNumber": {
+                  "typeName": "publicationIDNumber",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "arXiv:2407.09718"
+                },
+                "publicationURL": {
+                  "typeName": "publicationURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://arxiv.org/abs/2407.09718"
+                }
+              },
+              {
+                "publicationRelationType": {
+                  "typeName": "publicationRelationType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "Cites"
+                },
+                "publicationCitation": {
+                  "typeName": "publicationCitation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Zhang, Arthur, et al. \"Towards Robust Robot 3D Perception in Urban Environments: The UT Campus Object Dataset.\""
+                },
+                "publicationIDType": {
+                  "typeName": "publicationIDType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "doi"
+                },
+                "publicationIDNumber": {
+                  "typeName": "publicationIDNumber",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "10.1109/TRO.2024.3400831"
+                },
+                "publicationURL": {
+                  "typeName": "publicationURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://ieeexplore.ieee.org/document/10530418"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "notesText",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "\u003Ca href=\"https://github.com/ut-amrl/clover\"\u003ECLOVER github\u003C/a\u003E"
+          },
+          {
+            "typeName": "productionDate",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2024-05-01"
+          },
+          {
+            "typeName": "productionPlace",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "Autonomous Mobile Robotics Laboratory, University of Texas at Austin"
+            ]
+          },
+          {
+            "typeName": "contributor",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "contributorType": {
+                  "typeName": "contributorType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "Data Curator"
+                },
+                "contributorName": {
+                  "typeName": "contributorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Maria Esteva"
+                }
+              },
+              {
+                "contributorType": {
+                  "typeName": "contributorType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "Data Curator"
+                },
+                "contributorName": {
+                  "typeName": "contributorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Xingru Xou"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2024-07-23"
+          },
+          {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "json file with human readable annotations."
+            ]
+          },
+          {
+            "typeName": "software",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "softwareName": {
+                  "typeName": "softwareName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Interactive SLAM"
+                },
+                "softwareVersion": {
+                  "typeName": "softwareVersion",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://github.com/koide3/interactive_slam"
+                }
+              },
+              {
+                "softwareName": {
+                  "typeName": "softwareName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Segment Anything Model 2 (SAM 2)"
+                },
+                "softwareVersion": {
+                  "typeName": "softwareVersion",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://github.com/facebookresearch/sam2"
+                }
+              },
+              {
+                "softwareName": {
+                  "typeName": "softwareName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Clover"
+                },
+                "softwareVersion": {
+                  "typeName": "softwareVersion",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://github.com/ut-amrl/clover"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dataSources",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "Zhang, Arthur; Eranki, Chaitanya; Zhang, Christina; Hong, Raymond; Kalyani, Pranav; Kalyanaraman, Lochana; Gamare, Arsh; Bagad, Arnav; Esteva, Maria; Biswas, Joydeep, 2023, \"UT Campus Object Dataset (CODa)\", https://doi.org/10.18738/T8/BBOQMV  Texas Data Repository, V2"
+            ]
+          }
+        ]
+      }
+    },
+    "files": [
+      {
+        "label": "annotation_example.png",
+        "restricted": false,
+        "directoryLabel": "documentation",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 778871,
+          "persistentId": "",
+          "filename": "annotation_example.png",
+          "contentType": "image/png",
+          "friendlyType": "PNG Image",
+          "filesize": 543365,
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:19963922433-cf075b6a4fe9",
+          "rootDataFileId": -1,
+          "md5": "fbdd9d0bde3b2e3489a1905812fb3b7f",
+          "checksum": {
+            "type": "MD5",
+            "value": "fbdd9d0bde3b2e3489a1905812fb3b7f"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-19",
+          "publicationDate": "2025-09-25",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "2d annotations per image",
+        "label": "annotations.tar.gz",
+        "restricted": false,
+        "directoryLabel": "data/annotations",
+        "version": 3,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 776664,
+          "persistentId": "",
+          "filename": "annotations.tar.gz",
+          "contentType": "application/x-gzip",
+          "friendlyType": "Gzip Archive",
+          "filesize": 82214485,
+          "description": "2d annotations per image",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1990c935b93-1a9cc0557c42",
+          "rootDataFileId": -1,
+          "md5": "3ada0f061826952c098c0d89f29edf8b",
+          "checksum": {
+            "type": "MD5",
+            "value": "3ada0f061826952c098c0d89f29edf8b"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-02",
+          "publicationDate": "2025-09-02",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "3d bbox annotation in global frame",
+        "label": "Bollard.json",
+        "restricted": false,
+        "directoryLabel": "data/3d_bbox/global",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 776640,
+          "persistentId": "",
+          "filename": "Bollard.json",
+          "contentType": "application/json",
+          "friendlyType": "JSON",
+          "filesize": 17666,
+          "description": "3d bbox annotation in global frame",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1990c6e9f52-463e310c99d1",
+          "rootDataFileId": -1,
+          "md5": "962a5e3bbf6c0b9edcd52a114b1f33d0",
+          "checksum": {
+            "type": "MD5",
+            "value": "962a5e3bbf6c0b9edcd52a114b1f33d0"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-02",
+          "publicationDate": "2025-09-02",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "label": "codare-id_data_stucture.png",
+        "restricted": false,
+        "directoryLabel": "documentation",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 778870,
+          "persistentId": "",
+          "filename": "codare-id_data_stucture.png",
+          "contentType": "image/png",
+          "friendlyType": "PNG Image",
+          "filesize": 34464,
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1996386eb3e-117968d0a26e",
+          "rootDataFileId": -1,
+          "md5": "d0928d2a8e64bd4f142ee250087f4b88",
+          "checksum": {
+            "type": "MD5",
+            "value": "d0928d2a8e64bd4f142ee250087f4b88"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-19",
+          "publicationDate": "2025-09-25",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "label": "dataset_overall.png",
+        "restricted": false,
+        "directoryLabel": "documentation",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 778872,
+          "persistentId": "",
+          "filename": "dataset_overall.png",
+          "contentType": "image/png",
+          "friendlyType": "PNG Image",
+          "filesize": 303787,
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:199639225ce-8746b662a1cd",
+          "rootDataFileId": -1,
+          "md5": "84100a74c89929d07969b458f623cb8f",
+          "checksum": {
+            "type": "MD5",
+            "value": "84100a74c89929d07969b458f623cb8f"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-19",
+          "publicationDate": "2025-09-25",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Data Report that describes how the dataset was created. ",
+        "label": "Dataset Report CodaRe_ID.docx.pdf",
+        "restricted": false,
+        "directoryLabel": "documentation",
+        "version": 1,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 779442,
+          "persistentId": "",
+          "filename": "Dataset Report CodaRe_ID.docx.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 7004535,
+          "description": "Data Report that describes how the dataset was created. ",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1998207c54a-b3e88f5d94b7",
+          "rootDataFileId": -1,
+          "md5": "d7d422a02cc020db76365879dc797ac2",
+          "checksum": {
+            "type": "MD5",
+            "value": "d7d422a02cc020db76365879dc797ac2"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-25",
+          "publicationDate": "2025-09-25",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "3d bbox annotation in global frame",
+        "label": "Emergency_Phone.json",
+        "restricted": false,
+        "directoryLabel": "data/3d_bbox/global",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 776641,
+          "persistentId": "",
+          "filename": "Emergency_Phone.json",
+          "contentType": "application/json",
+          "friendlyType": "JSON",
+          "filesize": 1584,
+          "description": "3d bbox annotation in global frame",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1990c6e9ff4-a4ef4e83c2b5",
+          "rootDataFileId": -1,
+          "md5": "47403198433dadfb7a1d97909d8e0e07",
+          "checksum": {
+            "type": "MD5",
+            "value": "47403198433dadfb7a1d97909d8e0e07"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-02",
+          "publicationDate": "2025-09-02",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "3d bbox annotation in global frame",
+        "label": "Fire_Hydrant.json",
+        "restricted": false,
+        "directoryLabel": "data/3d_bbox/global",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 776642,
+          "persistentId": "",
+          "filename": "Fire_Hydrant.json",
+          "contentType": "application/json",
+          "friendlyType": "JSON",
+          "filesize": 2735,
+          "description": "3d bbox annotation in global frame",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1990c6e9da3-4fcee30efc06",
+          "rootDataFileId": -1,
+          "md5": "54f22301ea37bd5d40a58c6c4464d4c4",
+          "checksum": {
+            "type": "MD5",
+            "value": "54f22301ea37bd5d40a58c6c4464d4c4"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-02",
+          "publicationDate": "2025-09-02",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "3d bbox annotation in global frame",
+        "label": "Informational_Sign.json",
+        "restricted": false,
+        "directoryLabel": "data/3d_bbox/global",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 776646,
+          "persistentId": "",
+          "filename": "Informational_Sign.json",
+          "contentType": "application/json",
+          "friendlyType": "JSON",
+          "filesize": 7985,
+          "description": "3d bbox annotation in global frame",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1990c6ea29d-2f4bf6e9cec4",
+          "rootDataFileId": -1,
+          "md5": "83629b76068fc872cc56f3150658ca99",
+          "checksum": {
+            "type": "MD5",
+            "value": "83629b76068fc872cc56f3150658ca99"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-02",
+          "publicationDate": "2025-09-02",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "CC BY-NC-SA 4.0",
+        "label": "LICENSE",
+        "restricted": false,
+        "directoryLabel": "documentation",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 778873,
+          "persistentId": "",
+          "filename": "LICENSE",
+          "contentType": "application/octet-stream",
+          "friendlyType": "Unknown",
+          "filesize": 20850,
+          "description": "CC BY-NC-SA 4.0",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:199653d07a3-eb010a7fef05",
+          "rootDataFileId": -1,
+          "md5": "136c671dba2d2f644b882e31c3e289e8",
+          "checksum": {
+            "type": "MD5",
+            "value": "136c671dba2d2f644b882e31c3e289e8"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-19",
+          "publicationDate": "2025-09-25",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "3d bbox annotation in global frame",
+        "label": "Pole.json",
+        "restricted": false,
+        "directoryLabel": "data/3d_bbox/global",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 776645,
+          "persistentId": "",
+          "filename": "Pole.json",
+          "contentType": "application/json",
+          "friendlyType": "JSON",
+          "filesize": 85706,
+          "description": "3d bbox annotation in global frame",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1990c6e9e9f-421175fc305f",
+          "rootDataFileId": -1,
+          "md5": "b39353d3c80647594229633033c1199b",
+          "checksum": {
+            "type": "MD5",
+            "value": "b39353d3c80647594229633033c1199b"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-02",
+          "publicationDate": "2025-09-02",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "3d bbox annotation in global frame",
+        "label": "Traffic_Sign.json",
+        "restricted": false,
+        "directoryLabel": "data/3d_bbox/global",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 776644,
+          "persistentId": "",
+          "filename": "Traffic_Sign.json",
+          "contentType": "application/json",
+          "friendlyType": "JSON",
+          "filesize": 28567,
+          "description": "3d bbox annotation in global frame",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1990c6ea0aa-f76017838296",
+          "rootDataFileId": -1,
+          "md5": "8d41128b35d4362bddffd990b698960f",
+          "checksum": {
+            "type": "MD5",
+            "value": "8d41128b35d4362bddffd990b698960f"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-02",
+          "publicationDate": "2025-09-02",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "3d bbox annotation in global frame",
+        "label": "Trash_Can.json",
+        "restricted": false,
+        "directoryLabel": "data/3d_bbox/global",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 776643,
+          "persistentId": "",
+          "filename": "Trash_Can.json",
+          "contentType": "application/json",
+          "friendlyType": "JSON",
+          "filesize": 13379,
+          "description": "3d bbox annotation in global frame",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1990c6ea151-52d37bbdb233",
+          "rootDataFileId": -1,
+          "md5": "d34e9f9631bb69562ed2aedb118a78d9",
+          "checksum": {
+            "type": "MD5",
+            "value": "d34e9f9631bb69562ed2aedb118a78d9"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-02",
+          "publicationDate": "2025-09-02",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "3d bbox annotation in global frame",
+        "label": "Tree.json",
+        "restricted": false,
+        "directoryLabel": "data/3d_bbox/global",
+        "version": 2,
+        "datasetVersionId": 5588,
+        "dataFile": {
+          "id": 776647,
+          "persistentId": "",
+          "filename": "Tree.json",
+          "contentType": "application/json",
+          "friendlyType": "JSON",
+          "filesize": 85822,
+          "description": "3d bbox annotation in global frame",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:1990c6ea203-0a7ebdbf2c76",
+          "rootDataFileId": -1,
+          "md5": "f9802c33c1c0113d6683aeb8f8f78e73",
+          "checksum": {
+            "type": "MD5",
+            "value": "f9802c33c1c0113d6683aeb8f8f78e73"
+          },
+          "tabularData": false,
+          "creationDate": "2025-09-02",
+          "publicationDate": "2025-09-02",
+          "fileAccessRequest": true
+        }
+      }
+    ],
+    "citation": "Dongmeyong Lee; Adkins, Amanda; Biswas, Joydeep, 2025, \"CODa Re-identification (Re-ID) Dataset\", https://doi.org/10.18738/T8/E9WFTW, Texas Data Repository, V2"
+  }
+}
