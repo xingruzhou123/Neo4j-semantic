@@ -1,0 +1,76 @@
+{
+    "reports": [
+        {
+            "report_name": "Dataset Report CodaRe_ID.docx.pdf",
+            "report_type": "pdf",
+            "research_project_title": "CODa Re-identification (Re-ID) Dataset",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:3800"
+        },
+        {
+            "report_name": "EgoNRG_Dataset_Report_v2.pdf",
+            "report_type": "pdf",
+            "research_project_title": "EgoNRG: An Egocentric Multi-View Hand-Arm Segmentation and Classification Dataset for Real-World HRI in Military and Industrial Settings",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:226"
+        },
+        {
+            "report_name": "Dataset Report.pdf",
+            "report_type": "pdf",
+            "research_project_title": "Community Embedded Robotics: A Dataset to Study Perceived Social Intelligence and Safety During Unexpected Encounters with Quadrupedal Robots",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:421"
+        },
+        {
+            "report_name": "baa_DATA_REPORT.pdf",
+            "report_type": "pdf",
+            "research_project_title": "CODa: UT Campus Object Dataset",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:438"
+        },
+        {
+            "report_name": "vid2real real-world.json",
+            "report_type": "json",
+            "research_project_title": "GCR: Vid2Real real_world study",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:227"
+        },
+        {
+            "report_name": "vid2real online.json",
+            "report_type": "json",
+            "research_project_title": "GCR: Vid2Real online study",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:60"
+        },
+        {
+            "report_name": "Hand_and_Glove_Segmentation_Dataset_Report.pdf",
+            "report_type": "pdf",
+            "research_project_title": "Hand and Glove Segmentation Dataset for Department of Energy Glovebox Environments",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:448"
+        },
+        {
+            "report_name": "non-robot pre-deployment interviews.json",
+            "report_type": "json",
+            "research_project_title": "Non-Robot Pre-Deployment Interviews Analysis Dataset",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:415"
+        },
+        {
+            "report_name": "non-robot pre-deployment interviews.json",
+            "report_type": "json",
+            "research_project_title": "GCR: Non-Robot Interview Study",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:4"
+        },
+        {
+            "report_name": "AB_Readme_SCANDv2 .pdf",
+            "report_type": "pdf",
+            "research_project_title": "SCAND: Socially Compliant Navigation Dataset",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:442"
+        },
+        {
+            "report_name": "encounters.json",
+            "report_type": "json",
+            "research_project_title": "GCR: Video Encounters Study",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:23"
+        },
+        {
+            "report_name": "encounters.json",
+            "report_type": "json",
+            "research_project_title": "GCR: Robot Encounters",
+            "elementId": "4:f3f26a73-81c1-4bac-97bf-296e550975f9:7"
+        }
+    ]
+}

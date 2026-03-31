@@ -16,14 +16,15 @@ NEO4J_PASSWORD = "12345678"
 
 # OpenAI settings (reads from .env file or environment variable)
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+OPENAI_BASE_URL = "https://ai.tejas.tacc.utexas.edu/v1"
 
 # Check if API key is set
 if not OPENAI_API_KEY:
     print("WARNING: OPENAI_API_KEY is not set!")
     print("Please add it to .env file or run: export OPENAI_API_KEY='your-key-here'")
 
-OPENAI_MODEL = "gpt-4o-mini"  # Can use "gpt-4o" or "gpt-3.5-turbo" as well
-OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
+OPENAI_MODEL = "Qwen3-32B"  # Can use "gpt-4o" or "gpt-3.5-turbo" as well
+OPENAI_EMBEDDING_MODEL = "E5-Mistral-7B-Instruct"
 
 # LLM parameters
 TEMPERATURE = 0.7

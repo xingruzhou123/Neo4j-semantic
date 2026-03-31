@@ -1,0 +1,675 @@
+{
+  "id": 299883,
+  "identifier": "T8/KAHJIB",
+  "persistentUrl": "https://doi.org/10.18738/T8/KAHJIB",
+  "protocol": "doi",
+  "authority": "10.18738",
+  "publisher": "Texas Data Repository",
+  "publicationDate": "2024-02-12",
+  "storageIdentifier": "s3tacc://10.18738/T8/KAHJIB",
+  "datasetType": "dataset",
+  "datasetVersion": {
+    "id": 4239,
+    "datasetId": 299883,
+    "datasetPersistentId": "doi:10.18738/T8/KAHJIB",
+    "storageIdentifier": "s3tacc://10.18738/T8/KAHJIB",
+    "versionNumber": 1,
+    "versionMinorNumber": 1,
+    "versionState": "RELEASED",
+    "latestVersionPublishingState": "RELEASED",
+    "productionDate": "2023-09-12",
+    "UNF": "UNF:6:7qUm7PdBsfeX1uz1R7HaIA==",
+    "lastUpdateTime": "2024-02-14T20:42:10Z",
+    "releaseTime": "2024-02-14T20:42:10Z",
+    "createTime": "2024-02-14T19:54:42Z",
+    "publicationDate": "2024-02-12",
+    "citationDate": "2024-02-12",
+    "license": {
+      "name": "CC0 1.0",
+      "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+      "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png"
+    },
+    "fileAccessRequest": true,
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "name": "citation",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Community Embedded Robotics: Vid2Real An Online Video Dataset about Perceived Social Intelligence in Human Robot Encounters"
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Yao-Cheng Chan"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "University of Texas at Austin"
+                }
+              },
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Sadanand Modak"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "University of Texas at Austin"
+                }
+              },
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Elliott Hauser"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "University of Texas at Austin"
+                }
+              },
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Joydeep Biswas"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "University of Texas at Austin"
+                }
+              },
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Justin Hart"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "University of Texas at Austin"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Maria Esteva"
+                },
+                "datasetContactAffiliation": {
+                  "typeName": "datasetContactAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "University of Texas at Austin"
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "maria@tacc.utexas.edu"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "\u003Ch3\u003EIntroduction\u003C/h3\u003E\n\u003Cp\u003E This dataset was gathered during the Vid2Real online video-based study, which investigates humans’ perception of robots' intelligence in the context of an incidental Human-Robot encounter.  The dataset contains participants' questionnaire responses to four video study conditions, namely Baseline, Verbal, Body language, and Body language + Verbal. The videos depict a scenario where a pedestrian incidentally encounters a quadruped robot trying to enter a building. The robot uses verbal commands or body language to try to ask for help from the pedestrian in different study conditions. The differences in the conditions were manipulated using the robot’s verbal and expressive movement functionalities. \u003C/p\u003E\n\n\u003Ch3\u003EDataset Purpose\u003C/h3\u003E\n\u003Cp\u003EThe dataset includes the responses of human subjects about the robots' social intelligence used to validate the hypothesis that robot social intelligence is positively correlated with human compliance in an incidental human-robot encounter context. The video based dataset was also developed to obtain empirical evidence that can be used to design future real-world HRI studies.\u003C/p\u003E \n\n\u003Ch3\u003EDataset Contents\u003C/h3\u003E\n\u003Cul\u003E\n\u003Cli\u003EFour videos, each corresponding to a study condition.\u003C/li\u003E\n\u003Cli\u003EFour sets of Perceived Social Intelligence Scale data. Each set corresponds to one study condition\u003C/li\u003E\n\u003Cli\u003EFour sets of compliance likelihood questions, each set include one Likert question and one free-form question\u003C/li\u003E\n\u003Cli\u003EOne set of Godspeed questionnaire data.\u003C/li\u003E\n\u003Cli\u003EOne set of Anthropomorphism questionnaire data.\u003C/li\u003E\n\u003Cli\u003EA csv file containing the participants demographic data, Likert scale data, and text responses.\u003C/li\u003E\n\u003Cli\u003EA data dictionary explaining the meaning of each of the fields in the csv file.\u003C/li\u003E\n\u003C/ul\u003E\n\n\u003Ch3\u003EStudy Conditions\u003C/h3\u003E\nThere are 4 videos (i.e. study conditions), the video scenarios are as follows. \n\u003Cul\u003E\n\u003Cli\u003EBaseline: The robot walks up to the entrance and waits for the pedestrian to\nopen the door without any additional behaviors. This is also the \"control\" condition.\u003C/li\u003E\n\u003Cli\u003EVerbal: The robot walks up to the entrance, and says ”can you please open\nthe door for me” to the pedestrian while facing the same direction, then waits\nfor the pedestrian to open the door.\u003C/li\u003E\n\u003Cli\u003EBody Language: The robot walks up to the entrance, turns its head to look\nat the pedestrian, then turns its head to face the door, and waits for the\npedestrian to open the door.\u003C/li\u003E\n\u003Cli\u003EBody Language + Verbal: The robot walks up to the entrance, turns its head\nto look at the pedestrian, and says ”Can you open the door for me” to the\npedestrian, then waits for the pedestrian to open the door.\u003C/li\u003E\n\u003C/ul\u003E\n\u003Cdiv style=\"text-align: center;\"\u003E\n\u003Cimg src=\"https://dataverse.tdl.org/api/access/datafile/593008\" alt=”Verbal\" width=\"600\" height=\"300\"\u003E\u003C/p\u003E\n\u003C/div\u003E\n\u003Cp\u003EImage showing the Verbal condition.\u003C/p\u003E\n\u003Cdiv style=\"text-align: center;\"\u003E\n\u003Cimg src=\"https://dataverse.tdl.org/api/access/datafile/593009\" alt=”BodyLanguage\" width=\"600\" height=\"300\"\u003E\u003C/p\u003E\n\u003C/div\u003E\n\u003Cp\u003E Image showing the Body Language condition.\u003C/p\u003E\n\u003Cp\u003EA within-subject design was adopted, and all participants experienced all conditions. The order of the videos, as well as the PSI scales, were randomized. After receiving consent from the participants, they were presented with one video, followed by the PSI questions and the two exploratory questions (compliance likelihood) described above. This set was repeated 4 times, after which the participants would answer their general perceptions of the robot with Godspeed and AMPH questionnaires. Each video was around 20 seconds and the total study time was around 10 minutes.  \u003C/p\u003E\n\n\u003Ch3\u003EVideo as a Study Method\u003C/h3\u003E\n\u003Cp\u003E A video-based study in human-robot interaction research is a common method for data collection. Videos can easily be distributed via online participant recruiting platforms, and can reach a larger sample than in-person/lab-based studies. Therefore, it is a fast and easy method for data collection for research aiming to obtain empirical evidence. \u003C/p\u003E\n\n\u003Ch3\u003EVideo Filming\u003C/h3\u003E\n\u003Cp\u003EThe videos were filmed with a first-person point-of-view in order to maximize the alignment of video and real-world settings. The device used for the recording was an iPhone 12 pro, and the videos were shot in 4k 60 fps. For better accessibility, the videos have been converted to lower resolutions. \u003C/p\u003E\n\n\u003Ch3\u003EInstruments\u003C/h3\u003E\n\u003Cp\u003EThe questionnaires used in the study include the Perceived Social Intelligence Scale (PSI), Godspeed Questionnaire, and Anthropomorphism Questionnaire (AMPH). In addition to these questionnaires, a 5-point Likert question and a free-text response measuring human compliance were added for the purpose of the video-based study. Participant demographic data was also collected. Questionnaire items are attached as part of this dataset.\u003C/p\u003E\n\n\u003Ch3\u003EHuman Subjects\u003C/h3\u003E\n\u003Cp\u003E For the purpose of this project, the participants are recruited through Prolific. Therefore, the participants are users of Prolific. Additionally, they are restricted to people who are currently living in the United States, fluent in English, and have no hearing or visual impairments. No other restrictions were imposed. Among the 385 participants, 194 participants identified as female, and 191 as male, the age ranged from 19 to 75 (M = 38.53, SD = 12.86). Human subjects remained anonymous. Participants were compensated with $4 upon submission approval. This study was reviewed and approved by UT Austin Internal Review Board.\u003C/p\u003E\n\n\u003Ch3\u003ERobot\u003C/h3\u003E\n\u003Cp\u003EThe dataset contains data about humans’ perceived social intelligence of a Boston Dynamics’ quadruped robot Spot (Explorer model). The robot was selected because quadruped robots are gradually being adopted to provide services such as delivery, surveillance, and rescue. However, there are still issues or obstacles that robots cannot easily overcome by themselves in which they will have to ask for help from nearby humans. Therefore, it is important to understand how humans react to a quadruped robot that they incidentally encounter. \u003C/p\u003E\n\u003Cp\u003E For the purposes of this video-study, the robot operation was semi-autonomous, with the navigation being manually teleoperated by an operator and a few standalone autonomous modules to supplement it. \u003C/p\u003E\n\n\u003Ch3\u003EData Collection\u003C/h3\u003E\n\u003Cp\u003EThe data was collected through Qualtrics, a survey development platform. After the completion of data collection, the data was downloaded as a csv file. \u003C/p\u003E\n\n\u003Ch3\u003EData Quality Control\u003C/h3\u003E\n\u003Cp\u003EQualtrics automatically detects bots so any response that is flagged as bots are discarded. All incomplete and duplicate responses were discarded.\u003C/p\u003E\n\u003Ch3\u003EData Usage\u003C/h3\u003E\n\u003Cp\u003EThis dataset can be used to conduct a meta-analysis on robots' perceived intelligence. Please note that data is coupled with this study design. Users interested in data reuse will have to assess that this dataset is in line with their study design.\u003C/p\u003E\n\u003Ch3\u003EAcknowledgement\u003C/h3\u003E\n\u003Cp\u003EThis study was funded through the NSF Award # 2219236GCR: Community-Embedded Robotics: Understanding Sociotechnical Interactions with Long-term Autonomous Deployments.\u003C/p\u003E"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Computer and Information Science",
+              "Social Sciences"
+            ]
+          },
+          {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "robotics"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "online video studies"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Robot social intelligence"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "robots anthropomorphism"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "human robot interaction"
+                }
+              },
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Incidental human-robot encounter"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "language",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "English"
+            ]
+          },
+          {
+            "typeName": "productionDate",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2023-09-12"
+          },
+          {
+            "typeName": "productionPlace",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "University of Texas at Austin"
+            ]
+          },
+          {
+            "typeName": "contributor",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "contributorType": {
+                  "typeName": "contributorType",
+                  "multiple": false,
+                  "typeClass": "controlledVocabulary",
+                  "value": "Data Curator"
+                },
+                "contributorName": {
+                  "typeName": "contributorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Maria Esteva"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "grantNumber",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "grantNumberAgency": {
+                  "typeName": "grantNumberAgency",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "National Science Foundation"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2024-01-19"
+          },
+          {
+            "typeName": "dateOfCollection",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dateOfCollectionStart": {
+                  "typeName": "dateOfCollectionStart",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2023-09-12"
+                },
+                "dateOfCollectionEnd": {
+                  "typeName": "dateOfCollectionEnd",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2023-09-12"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "free-text reponse, video, questionnaire data"
+            ]
+          },
+          {
+            "typeName": "series",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "seriesName": {
+                  "typeName": "seriesName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Community Embedded Robotics"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "relatedMaterial",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "Perceived Social Intelligence Scale: Barchard, K. A., Lapping-Carr, L., Westfall, R. S., Fink-Armold, A.,\n Banisetty, S. B., & Feil-Seifer, D. (2020). Measuring the perceived social intelligence of robots. ACM Transactions on Human-Robot Interaction (THRI), 9(4), 1-29.",
+              "Godspeed questionnaire: Bartneck, C., Kulić, D., Croft, E., & Zoghbi, S. (2009). Measurement instruments for the anthropomorphism, animacy, likeability, perceived intelligence, and perceived safety of robots. International journal of social robotics, 1, 71-81.",
+              "Anthropomorphism Questionnaire: Damholdt, M. F., Vestergaard, C., & Seibt, J. (2020). Testing for ‘anthropomorphization’: a case for mixed methods in human-robot interaction. Human-Robot Interaction: Evaluation Methods and Their Standardization, 203-227."
+            ]
+          },
+          {
+            "typeName": "otherReferences",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "Prolific, participants recruitment platform. https://www.prolific.com/",
+              "Qualtrics, https://www.qualtrics.com/",
+              "Spot SDK software development kit documentation. https://dev.bostondynamics.com/"
+            ]
+          }
+        ]
+      },
+      "geospatial": {
+        "displayName": "Geospatial Metadata",
+        "name": "geospatial",
+        "fields": []
+      },
+      "socialscience": {
+        "displayName": "Social Science and Humanities Metadata",
+        "name": "socialscience",
+        "fields": [
+          {
+            "typeName": "unitOfAnalysis",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "Participants responses."
+            ]
+          },
+          {
+            "typeName": "universe",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "The participants were recruited through the Prolific platform. Therefore, the participants were limited to the Prolific user body. Additionally, for this study, the participants had to reside in the United States, be fluent in English, and have no visual or hearing difficulties."
+            ]
+          },
+          {
+            "typeName": "dataCollector",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "The University of Texas at Austin"
+          },
+          {
+            "typeName": "samplingProcedure",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "An equal amount of participants identified as male and female. Prolific does not have flexibility in terms of gender identification. Therefore, the participants will have to either identify as a male or a female."
+          },
+          {
+            "typeName": "targetSampleSize",
+            "multiple": false,
+            "typeClass": "compound",
+            "value": {
+              "targetSampleActualSize": {
+                "typeName": "targetSampleActualSize",
+                "multiple": false,
+                "typeClass": "primitive",
+                "value": "385"
+              }
+            }
+          },
+          {
+            "typeName": "collectionMode",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "The video and questionnaire were distributed via Prolific."
+            ]
+          },
+          {
+            "typeName": "researchInstrument",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "3 sets of questionnaire and one open-text response with no follow-ups."
+          },
+          {
+            "typeName": "cleaningOperations",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Participants  identified as \"bot\" by Qualtrics, and those who did not complete the survey were discarded"
+          }
+        ]
+      },
+      "journal": {
+        "displayName": "Journal Metadata",
+        "name": "journal",
+        "fields": []
+      }
+    },
+    "files": [
+      {
+        "label": "Baseline (1080p).mp4",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 4239,
+        "dataFile": {
+          "id": 299988,
+          "persistentId": "",
+          "filename": "Baseline (1080p).mp4",
+          "contentType": "video/mp4",
+          "friendlyType": "MPEG-4 Video",
+          "filesize": 12229075,
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:18d3c65f418-255ef7053609",
+          "rootDataFileId": -1,
+          "md5": "76441c11bb2eafeb2df47254067a8120",
+          "checksum": {
+            "type": "MD5",
+            "value": "76441c11bb2eafeb2df47254067a8120"
+          },
+          "tabularData": false,
+          "creationDate": "2024-01-24",
+          "publicationDate": "2024-02-12",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "label": "Body Language (1080p).mp4",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 4239,
+        "dataFile": {
+          "id": 299987,
+          "persistentId": "",
+          "filename": "Body Language (1080p).mp4",
+          "contentType": "video/mp4",
+          "friendlyType": "MPEG-4 Video",
+          "filesize": 21185325,
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:18d3c65f549-c22087b59909",
+          "rootDataFileId": -1,
+          "md5": "376e6e92d471cbd930fbff496709a598",
+          "checksum": {
+            "type": "MD5",
+            "value": "376e6e92d471cbd930fbff496709a598"
+          },
+          "tabularData": false,
+          "creationDate": "2024-01-24",
+          "publicationDate": "2024-02-12",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "label": "bodylanguage_lowresolution.png",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 4239,
+        "dataFile": {
+          "id": 593009,
+          "persistentId": "",
+          "filename": "bodylanguage_lowresolution.png",
+          "contentType": "image/png",
+          "friendlyType": "PNG Image",
+          "filesize": 3362601,
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:18d9ef3697a-06d005ff91b3",
+          "rootDataFileId": -1,
+          "md5": "73c5fa472e52fc51a59cb75527f6f590",
+          "checksum": {
+            "type": "MD5",
+            "value": "73c5fa472e52fc51a59cb75527f6f590"
+          },
+          "tabularData": false,
+          "creationDate": "2024-02-12",
+          "publicationDate": "2024-02-12",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "label": "Body Language + Verbal (1080p).mp4",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 4239,
+        "dataFile": {
+          "id": 299984,
+          "persistentId": "",
+          "filename": "Body Language + Verbal (1080p).mp4",
+          "contentType": "video/mp4",
+          "friendlyType": "MPEG-4 Video",
+          "filesize": 20896794,
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:18d370adf5b-c7179e5e3c71",
+          "rootDataFileId": -1,
+          "md5": "c7fc357aec624cce63ccb6272df61ea5",
+          "checksum": {
+            "type": "MD5",
+            "value": "c7fc357aec624cce63ccb6272df61ea5"
+          },
+          "tabularData": false,
+          "creationDate": "2024-01-23",
+          "publicationDate": "2024-02-12",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "The data dictionary of the dataset.",
+        "label": "Data Dictionary.pdf",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 4239,
+        "dataFile": {
+          "id": 592969,
+          "persistentId": "",
+          "filename": "Data Dictionary.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 49688,
+          "description": "The data dictionary of the dataset.",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:18d85fc7989-ebd66a5202c4",
+          "rootDataFileId": -1,
+          "md5": "2b30a9d3fb10f7d339aaa9b80f95df8d",
+          "checksum": {
+            "type": "MD5",
+            "value": "2b30a9d3fb10f7d339aaa9b80f95df8d"
+          },
+          "tabularData": false,
+          "creationDate": "2024-02-07",
+          "publicationDate": "2024-02-12",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "Contains all the data gathered in this study.",
+        "label": "Dataset.tab",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 4239,
+        "dataFile": {
+          "id": 592971,
+          "persistentId": "",
+          "filename": "Dataset.tab",
+          "contentType": "text/tab-separated-values",
+          "friendlyType": "Tab-Delimited",
+          "filesize": 143673,
+          "description": "Contains all the data gathered in this study.",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:18d85ffbf01-dc80933f8986",
+          "originalFileFormat": "text/comma-separated-values",
+          "originalFormatLabel": "Comma Separated Values",
+          "originalFileSize": 141165,
+          "originalFileName": "Dataset.csv",
+          "UNF": "UNF:6:7qUm7PdBsfeX1uz1R7HaIA==",
+          "rootDataFileId": -1,
+          "md5": "839fa0e18a07e5916c70cfaf7f84840f",
+          "checksum": {
+            "type": "MD5",
+            "value": "839fa0e18a07e5916c70cfaf7f84840f"
+          },
+          "tabularData": true,
+          "creationDate": "2024-02-07",
+          "publicationDate": "2024-02-12",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "description": "The questionnaire used in this study.",
+        "label": "Questionnaire.pdf",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 4239,
+        "dataFile": {
+          "id": 592970,
+          "persistentId": "",
+          "filename": "Questionnaire.pdf",
+          "contentType": "application/pdf",
+          "friendlyType": "Adobe PDF",
+          "filesize": 98624,
+          "description": "The questionnaire used in this study.",
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:18d85ff2db8-a10b7a53dedc",
+          "rootDataFileId": -1,
+          "md5": "cef76bb9362c1fa373a8e8c66b3546b4",
+          "checksum": {
+            "type": "MD5",
+            "value": "cef76bb9362c1fa373a8e8c66b3546b4"
+          },
+          "tabularData": false,
+          "creationDate": "2024-02-07",
+          "publicationDate": "2024-02-12",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "label": "Verbal (1080p).mp4",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 4239,
+        "dataFile": {
+          "id": 299986,
+          "persistentId": "",
+          "filename": "Verbal (1080p).mp4",
+          "contentType": "video/mp4",
+          "friendlyType": "MPEG-4 Video",
+          "filesize": 12502479,
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:18d3c65f1c9-7fb2fe9f7e77",
+          "rootDataFileId": -1,
+          "md5": "71c0b11f5f3e1966ee3566633a97b6e9",
+          "checksum": {
+            "type": "MD5",
+            "value": "71c0b11f5f3e1966ee3566633a97b6e9"
+          },
+          "tabularData": false,
+          "creationDate": "2024-01-24",
+          "publicationDate": "2024-02-12",
+          "fileAccessRequest": true
+        }
+      },
+      {
+        "label": "verbal_lowresolution.png",
+        "restricted": false,
+        "version": 1,
+        "datasetVersionId": 4239,
+        "dataFile": {
+          "id": 593008,
+          "persistentId": "",
+          "filename": "verbal_lowresolution.png",
+          "contentType": "image/png",
+          "friendlyType": "PNG Image",
+          "filesize": 3025116,
+          "storageIdentifier": "s3tacc://dataverse-prod-tacc-s3:18d9ef36bb2-0b61f8572532",
+          "rootDataFileId": -1,
+          "md5": "7f23c04ff8055a78eca963457bd34810",
+          "checksum": {
+            "type": "MD5",
+            "value": "7f23c04ff8055a78eca963457bd34810"
+          },
+          "tabularData": false,
+          "creationDate": "2024-02-12",
+          "publicationDate": "2024-02-12",
+          "fileAccessRequest": true
+        }
+      }
+    ],
+    "citation": "Yao-Cheng Chan; Sadanand Modak; Elliott Hauser; Joydeep Biswas; Justin Hart, 2024, \"Community Embedded Robotics: Vid2Real An Online Video Dataset about Perceived Social Intelligence in Human Robot Encounters\", https://doi.org/10.18738/T8/KAHJIB, Texas Data Repository, V1, UNF:6:7qUm7PdBsfeX1uz1R7HaIA== [fileUNF]"
+  }
+}
