@@ -7,13 +7,13 @@ Includes Safety Shield for hallucination detection and RAG faithfulness.
 
 from llm import llm
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
-from langchain.schema import StrOutputParser
-from langchain.tools import Tool
-from langchain.agents import AgentExecutor, create_react_agent
-from langchain.memory import ConversationBufferMemory
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.tools import Tool
+from langchain_classic.agents import AgentExecutor, create_react_agent
+from langchain_classic.memory import ConversationBufferMemory
 
-from tools.cypher import cypher_qa
-from tools.vector import get_description
+from tools.cypher import cypher_qa, SCHEMA_DESCRIPTION
+from tools.vector import search_reports
 from connect_safeshield import SafetyShield
 
 # Initialize Safety Shield
@@ -36,20 +36,20 @@ general_chat = chat_prompt | llm | StrOutputParser()
 
 # Define tools available to the agent
 tools = [
-    Tool.from_function(
+    Tool(
         name="General Chat",
         description="For general discussion about research topics not covered by other tools",
         func=general_chat.invoke,
     ),
-    Tool.from_function(
+    Tool(
         name="Research Database Query",
         description="Use this tool to query the research database for information about research projects, datasets, team members, research methods, human subjects, experiment settings, and sessions. Use Cypher queries to find specific information.",
         func=cypher_qa,
     ),
-    Tool.from_function(
-        name="Description Search",
-        description="For searching research projects by their descriptions using semantic similarity (requires vector indexes)",
-        func=get_description,
+    Tool(
+        name="Report Search",
+        description="Search the text content of ingested research reports and papers (PDFs) for detailed methodology, findings, experiment design, data collection procedures, or results. Use this when the user asks about the content of a research paper or report, not for structured database queries.",
+        func=search_reports,
     ),
 ]
 
@@ -61,11 +61,11 @@ agent_prompt = PromptTemplate.from_template("""
 You are an expert research assistant providing information about research projects and datasets.
 Be as helpful as possible and return as much information as possible.
 
-The database contains information about:
-- Research Projects: with titles, descriptions, keywords, team members, study areas
-- Research Methods: including experiment instruments, human subjects, experiment settings, and sessions
-- Datasets: with URLs and associated human/robot data
-- Human-Robot Interaction studies
+The Neo4j database contains the following schema:
+""" + SCHEMA_DESCRIPTION + """
+Use this schema knowledge to decide which tool to use and how to phrase your queries.
+For structured data (project metadata, methods, datasets, robots, subjects), use the Research Database Query tool.
+For detailed content from research papers/reports, use the Report Search tool.
 
 Do not answer any questions using your pre-trained knowledge about specific research projects, only use the information provided by the tools.
 

@@ -10,41 +10,88 @@ sys.path.append('..')
 from llm import llm
 from graph import driver
 from langchain_core.prompts import ChatPromptTemplate
-from langchain.schema import StrOutputParser
+from langchain_core.output_parsers import StrOutputParser
 
 # Schema description for the LLM (manually defined since APOC is not available)
 SCHEMA_DESCRIPTION = """
 Node Labels and Properties:
-- ResearchProject: rp_id, research_project_title, contact_person_and_email, data_description,
-  data_gathering_begin_date, data_gathering_end_date, data_gathering_site, human_subjects,
-  instruments, keywords, research_problem_question, study_area, team_members, will_this_data_be_published
+- ResearchProject: rp_id (may be None), research_project_title, contact_person_and_email,
+  data_description, data_gathering_begin_date, data_gathering_end_date, data_gathering_site,
+  human_subjects, instruments, keywords, research_problem_question, study_area, team_members,
+  will_this_data_be_published, associated_publication_title, data_availability_for_internal_sharing,
+  data_organization_description_for_accessibility, date_of_publication,
+  location_of_data_when_available_for_internal_sharing, publisher_or_event
 - ResearchMethod: rm_id, name, method_details, type_s
 - ExperimentInstrument: ei_id, Survey, Code_book
-- HumanSubject: hs_id, Age, Gender, Ethnicity, How_many_participants_are_included,
-  Regional_Distribution, Recruitment_mode, IRB_Number_and_resolution, Protected_Data
+- HumanSubject (also labeled HumanSubjects in some projects): hs_id, Age, Gender, Ethnicity,
+  How_many_participants_are_included, Regional_Distribution, Recruitment_mode,
+  IRB_Number_and_resolution, Protected_Data
 - ExperimentSetting: es_id, Format, Geographical_location, Environment_description, Conditions, Tasks
-- Sessions: s_id, Sessions, Number_of_sessions, Trials_per_session, Duration_of_trials, Subjects_per_session
+- Sessions (also labeled Session in some projects): s_id, Sessions, Number_of_sessions,
+  Trials_per_session, Duration_of_trials, Subjects_per_session
 - Dataset: d_id, name, url
-- HumanData: hd_id
-- HumanData_session: hds_id, session[x]_data_file_path
-- Robot: r_id, Robot_type, Model, Robot_Model_URL, Hardware_instrumentation, Software_instrumentation,
-  Indicate_if_adaptations_were_made, Implementation, Size, Motion_replay
-- RobotData: rd_id
-- RobotData_session: rds_id, session[x]_data_file_path
+- HumanData (also labeled HumanDataset, Human_Dataset in some projects): hd_id
+- Robot (also labeled Robots in some projects): r_id, Robot_type, Model, Robot_Model_URL,
+  Hardware_instrumentation, Software_instrumentation, Indicate_if_adaptations_were_made,
+  Implementation, Size, Motion_replay
+- RobotData (also labeled RobotDataset, Robot_Dataset, robotdata in some projects): rd_id
+- DocumentChunk: text, embedding, source_file, chunk_index (RAG report chunks)
+- ProjectReports: source_file (groups DocumentChunks per project)
+- Problem: (GCR-specific qualitative research problems/themes)
+- Analysis: (GCR-specific analysis node)
+- Other project-specific nodes: AnnotationData, AnnotationFile, Video, videos, images, masks,
+  SensorData, RosBag, IMU, FrontCamera2D, Lidar3D, RoomGeometry, Location, ObjectClass,
+  Questionnaire, ComfortQuestionnaire, InterviewSchedule, Trial, Quote, InductiveTheme,
+  DeductiveLabel, AnalysisResult, Conditions
 
 Relationships:
-- (ResearchProject)-[:HAS_METHOD]->(ResearchMethod)
-- (ResearchProject)-[:HAS_DATASET]->(Dataset)
-- (ResearchProject)-[:USES_ROBOT]->(Robot)
-- (ResearchMethod)-[:Has_questionnaires]->(ExperimentInstrument)
-- (ResearchMethod)-[:Session_HumanSubject]->(HumanSubject)
-- (ResearchMethod)-[:Has_Settings]->(ExperimentSetting)
-- (ResearchMethod)-[:Has_Sessions]->(Sessions)
-- (Dataset)-[:Has_HumanData]->(HumanData)
-- (Dataset)-[:Has_RobotData]->(RobotData)
-- (HumanData)-[:Has_Session_Data]->(HumanData_session)
-- (RobotData)-[:Has_Session_Data]->(RobotData_session)
-- (HumanData_session)-[:Aligned_Session]->(RobotData_session)
+IMPORTANT: Relationship names are INCONSISTENT across projects. When writing Cypher queries,
+use UNION or multiple OPTIONAL MATCH clauses to try ALL variants for a given relationship.
+
+ResearchProject → ResearchMethod:
+  - [:HAS_METHOD] (canonical, used by newer projects like EgoNRG, CODa Re-ID)
+  - [:Has_ResearchMethod] (used by most older projects)
+  - [:Type] (used by GCR projects)
+  Always try all three when querying research methods.
+
+ResearchProject → Dataset:
+  - [:HAS_DATASET] (canonical, newer projects)
+  - [:Generates] (most older projects)
+  Always try both when querying datasets.
+
+ResearchProject → Robot:
+  - [:USES_ROBOT] (canonical, newer projects)
+  - [:Experiment_Robots] (older projects, may point to Robot or Robots label)
+  Always try both when querying robots.
+
+ResearchProject → Reports (RAG):
+  - (ResearchProject)-[:HAS_REPORTS]->(ProjectReports)-[:CONTAINS_CHUNK]->(DocumentChunk)
+
+ResearchProject → Qualitative (GCR-specific):
+  - [:Has_Problem] or [:Has] → (Problem)
+  - [:Type] → (Analysis)
+
+ResearchMethod relationships:
+  - [:Has_questionnaires] → (ExperimentInstrument)
+  - [:Session_HumanSubject] or [:Session_HumanSubjects] → (HumanSubject or HumanSubjects)
+  - [:Has_Settings] → (ExperimentSetting)
+  - [:Has_Sessions] → (Sessions or Session)
+
+Dataset relationships:
+  - [:Has_HumanData] or [:Dataset_Human] or [:Dataset_HumanDataset] → (HumanData or HumanDataset)
+  - [:Has_RobotData] or [:Dataset_Robot] or [:Dataset_RobotDataset] → (RobotData or RobotDataset)
+  - [:Dataset_RosBag] → (RosBag)
+  - [:Dataset_IMU] → (IMU)
+  - [:Dataset_video] or [:Dataset_Video] or [:Has_Video] → (video or Video or videos)
+  - [:Dataset_FrontCamera] → (FrontCamera2D)
+  - [:Dataset_Lidar3D] → (Lidar3D)
+  - [:Contains] → (various sensor/data nodes)
+
+QUERY TIPS:
+- Always use toLower() and CONTAINS for text matching (property names and values have inconsistent casing).
+- When searching for a project by title, use: WHERE toLower(rp.research_project_title) CONTAINS toLower("search term")
+- For broad queries, use OPTIONAL MATCH with multiple relationship variants to capture all data.
+- Return specific properties, not entire nodes.
 """
 
 # Prompt for generating Cypher queries
